@@ -1,0 +1,52 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Pumi" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/jade</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+
+        <item name="android:statusBarColor" tools:targetApi="lollipop">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">#80FFFFFF</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+
+        <!-- Customize your theme here. -->
+
+        <item name="toolbarStyle">@style/Style.Phum.Toolbar</item>
+        <item name="materialButtonStyle">@style/Style.Phum.Button</item>
+        <item name="fontFamily">@font/kantumruy_regular</item>
+
+    </style>
+
+
+    <style name="Style.Phum.Toolbar" parent="@style/Widget.MaterialComponents.Toolbar">
+        <item name="contentInsetLeft">0dp</item>
+        <item name="contentInsetStart">0dp</item>
+    </style>
+
+    <style name="Style.Phum.TitleTextView" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Style.Phum.SecondTextView" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Style.Phum.Button" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/jade</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="rippleColor">@color/jade</item>
+    </style>
+
+</resources>

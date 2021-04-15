@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Phumi</string>
+    <string name="administrative_region">តំបន់រដ្ឋបាល</string>
+    <string name="Phum">Phum</string>
+    <string name="mi">អំពី​ខ្ញុំ</string>
+    <string name="see_district">មើលស្រុក</string>
+    <string name="see_commune">មើលឃុំ</string>
+    <string name="see_village">មើលភូមិ</string>
+    <string name="about_app">កម្មវិធីនេះបង្កើតឡើងសម្រាប់អ្នករាល់គ្នាដែលចង់ដឹងពីតំបន់រដ្ឋបាលទាំងអស់នៅក្នុងប្រទេសកម្ពុជារួមមានខេត្តស្រុកឃុំនិងភូមិ។</string>
+    <string name="bring_by">Powered by https://pumiapp.herokuapp.com</string>
+</resources>
+

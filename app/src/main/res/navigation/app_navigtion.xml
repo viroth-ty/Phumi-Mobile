@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigtion"
+    app:startDestination="@id/phumFragment">
+
+    <keep_state_fragment
+        android:id="@+id/miFragment"
+        android:name="com.pumi.app.view.mi.MiFragment"
+        android:label="fragment_mi"
+        tools:layout="@layout/fragment_mi" />
+
+    <keep_state_fragment
+        android:id="@+id/phumFragment"
+        android:name="com.pumi.app.view.fragment.PhumFragment"
+        android:label="fragment_phum"
+        tools:layout="@layout/fragment_phum" />
+</navigation>

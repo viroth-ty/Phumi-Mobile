@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigtion"
+    app:startDestination="@id/provinceFragment">
+
+    <fragment
+        android:id="@+id/provinceFragment"
+        android:name="com.pumi.app.view.fragment.ProvinceFragment"
+        android:label="fragment_province"
+        tools:layout="@layout/fragment_province">
+        <action
+            android:id="@+id/action_provinceFragment_to_districtFragment"
+            app:destination="@id/districtFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/districtFragment"
+        android:name="com.pumi.app.view.fragment.DistrictFragment"
+        android:label="fragment_district"
+        tools:layout="@layout/fragment_district">
+        <action
+            android:id="@+id/action_districtFragment_to_communeFragment"
+            app:destination="@id/communeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/communeFragment"
+        android:name="com.pumi.app.view.fragment.CommuneFragment"
+        android:label="fragment_commune"
+        tools:layout="@layout/fragment_commune" >
+        <action
+            android:id="@+id/action_communeFragment_to_villageFragment"
+            app:destination="@id/villageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/villageFragment"
+        android:name="com.pumi.app.view.fragment.VillageFragment"
+        android:label="fragment_village"
+        tools:layout="@layout/fragment_village" />
+
+</navigation>
