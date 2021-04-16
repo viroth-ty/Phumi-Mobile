@@ -16,6 +16,7 @@ import com.pumi.app.listener.HandleListener
 import com.pumi.app.utils.Constant
 import com.pumi.app.utils.navigateSafe
 import com.pumi.app.view.epoxy.ProvinceController
+import com.seanghay.statusbar.statusBar
 
 class DistrictFragment : Fragment() {
 
@@ -37,6 +38,9 @@ class DistrictFragment : Fragment() {
         val navController = findNavController()
 
         val id = arguments?.getString(Constant.Bundle.id)
+        val name = arguments?.getString(Constant.Bundle.name)
+
+        binding.toolbarTitle.text = name
 
         initAction(provinceId = id!!)
         initView(navController = navController)
@@ -53,19 +57,22 @@ class DistrictFragment : Fragment() {
     private fun initView(navController: NavController) {
 
         binding.lottie.setAnimation(R.raw.loading)
-
-        provinceController = ProvinceController(context = requireContext(), object : HandleListener {
+        binding.backButton.setOnClickListener {
+            navController.popBackStack()
+        }
+        provinceController =
+            ProvinceController(context = requireContext(), requireContext().getColor(R.color.chestnut), object : HandleListener {
                 override fun onItemClick(item: Phum) {
                     super.onItemClick(item)
                     val bundle = bundleOf(
-                        Constant.Bundle.id to item.id
+                        Constant.Bundle.id to item.id,
+                        Constant.Bundle.name to item.fullNameKM
                     )
-                    navController.navigateSafe(R.id.action_districtFragment_to_communeFragment, bundle)
+                    navController.navigateSafe(R.id.action_districtFragment_to_communeFragment,
+                        bundle)
                 }
             }, textButton = requireContext().getString(R.string.see_commune))
-
         binding.recyclerview.setController(provinceController)
-
     }
 
     private fun initObservable(navController: NavController) {
@@ -84,10 +91,4 @@ class DistrictFragment : Fragment() {
             }
         })
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
 }

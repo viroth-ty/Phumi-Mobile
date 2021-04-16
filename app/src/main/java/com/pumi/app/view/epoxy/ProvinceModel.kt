@@ -20,6 +20,10 @@ abstract class ProvinceModel : EpoxyModelWithHolder<ProvinceModel.HeaderViewHold
     @field:EpoxyAttribute
     var buttonText: String? = null
 
+    @field:EpoxyAttribute
+    var color: Int? = null
+
+
     @field:EpoxyAttribute(EpoxyAttribute.Option.DoNotHash)
     open var itemClickListener: View.OnClickListener? = null
 
@@ -30,6 +34,8 @@ abstract class ProvinceModel : EpoxyModelWithHolder<ProvinceModel.HeaderViewHold
             englishTitle.text = english
             buttonView.text = buttonText
             buttonView.setOnClickListener(itemClickListener)
+            buttonView.setTextColor(color!!)
+            root.setBackgroundColor(color!!)
         }
     }
 

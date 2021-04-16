@@ -16,6 +16,7 @@ import com.pumi.app.listener.HandleListener
 import com.pumi.app.utils.Constant
 import com.pumi.app.utils.navigateSafe
 import com.pumi.app.view.epoxy.ProvinceController
+import com.seanghay.statusbar.statusBar
 
 class CommuneFragment : Fragment() {
 
@@ -36,6 +37,10 @@ class CommuneFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         val navController = findNavController()
         val id = arguments?.getString(Constant.Bundle.id)
+        val name = arguments?.getString(Constant.Bundle.name)
+
+        binding.toolbarTitle.text = name
+
         initAction(districtId = id!!)
         initView(navController = navController)
         initObservable(navController = navController)
@@ -52,11 +57,15 @@ class CommuneFragment : Fragment() {
         binding.lottie.setAnimation(R.raw.loading)
         binding.lottie.loop(true)
 
-        controller = ProvinceController(context = requireContext(), object : HandleListener {
+        binding.backButton.setOnClickListener {
+            navController.popBackStack()
+        }
+        controller = ProvinceController(context = requireContext(), requireContext().getColor(R.color.flame), object : HandleListener {
             override fun onItemClick(item: Phum) {
                 super.onItemClick(item)
                 val bundle = bundleOf(
-                    Constant.Bundle.id to item.id
+                    Constant.Bundle.id to item.id,
+                    Constant.Bundle.name to item.fullNameKM
                 )
                 navController.navigateSafe(R.id.action_communeFragment_to_villageFragment, bundle)
             }

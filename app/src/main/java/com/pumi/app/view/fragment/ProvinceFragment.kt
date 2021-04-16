@@ -16,6 +16,7 @@ import com.pumi.app.listener.HandleListener
 import com.pumi.app.utils.Constant
 import com.pumi.app.utils.navigateSafe
 import com.pumi.app.view.epoxy.ProvinceController
+import com.seanghay.statusbar.statusBar
 
 class ProvinceFragment : Fragment() {
 
@@ -55,12 +56,12 @@ class ProvinceFragment : Fragment() {
         binding.lottie.loop(true)
 
         provinceController =
-            ProvinceController(context = requireContext(), object : HandleListener {
+            ProvinceController(context = requireContext(), requireContext().getColor(R.color.jade), object : HandleListener {
                 override fun onItemClick(item: Phum) {
                     super.onItemClick(item)
-                    println("item click $item")
                     val bundle = bundleOf(
-                        Constant.Bundle.id to item.id
+                        Constant.Bundle.id to item.id,
+                        Constant.Bundle.name to item.fullNameKM
                     )
                     navController.navigateSafe(R.id.action_provinceFragment_to_districtFragment,
                         bundle)
@@ -83,6 +84,5 @@ class ProvinceFragment : Fragment() {
                 binding.lottie.visibility = View.GONE
             }
         })
-
     }
 }

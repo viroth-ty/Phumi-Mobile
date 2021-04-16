@@ -3,6 +3,9 @@ package com.pumi.app
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
+import android.graphics.Color
+import android.os.Build
+import android.view.WindowManager
 import com.pumi.app.http.phumiService
 import com.pumi.app.repository.MainRepository
 
@@ -15,6 +18,7 @@ class PhumiApp : Application() {
 
         lateinit var mainRepository: MainRepository
     }
+
 
     override fun onCreate() {
         super.onCreate()

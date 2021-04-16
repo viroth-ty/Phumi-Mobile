@@ -12,6 +12,7 @@ import com.pumi.app.R
 import com.pumi.app.databinding.FragmentVillageBinding
 import com.pumi.app.utils.Constant
 import com.pumi.app.view.epoxy.VillageController
+import com.seanghay.statusbar.statusBar
 
 class VillageFragment : Fragment() {
 
@@ -33,6 +34,9 @@ class VillageFragment : Fragment() {
         val navController = findNavController()
 
         val id = arguments?.getString(Constant.Bundle.id)
+        val name  = arguments?.getString(Constant.Bundle.name)
+        binding.toolbarTitle.text = name
+
         initAction(communeId = id!!)
         initView(navController = navController)
         initObservable(navController = navController)
@@ -49,6 +53,9 @@ class VillageFragment : Fragment() {
         binding.lottie.setAnimation(R.raw.loading)
         binding.lottie.loop(true)
 
+        binding.backButton.setOnClickListener {
+            navController.popBackStack()
+        }
         controller = VillageController()
         binding.recyclerview.setController(controller)
     }
