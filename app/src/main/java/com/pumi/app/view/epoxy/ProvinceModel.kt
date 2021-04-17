@@ -1,5 +1,7 @@
 package com.pumi.app.view.epoxy
 
+import android.annotation.SuppressLint
+import android.content.res.ColorStateList
 import android.view.View
 import com.airbnb.epoxy.EpoxyAttribute
 import com.airbnb.epoxy.EpoxyHolder
@@ -8,6 +10,7 @@ import com.airbnb.epoxy.EpoxyModelWithHolder
 import com.pumi.app.R
 import com.pumi.app.databinding.ComponentProvinceBinding
 
+@SuppressLint("NonConstantResourceId")
 @EpoxyModelClass(layout = R.layout.component_province)
 abstract class ProvinceModel : EpoxyModelWithHolder<ProvinceModel.HeaderViewHolder>() {
 
@@ -23,18 +26,23 @@ abstract class ProvinceModel : EpoxyModelWithHolder<ProvinceModel.HeaderViewHold
     @field:EpoxyAttribute
     var color: Int? = null
 
+    @field:EpoxyAttribute
+    var view: Int? = null
 
     @field:EpoxyAttribute(EpoxyAttribute.Option.DoNotHash)
     open var itemClickListener: View.OnClickListener? = null
 
     override fun bind(holder: HeaderViewHolder) {
         super.bind(holder)
+
         holder.binding.apply {
             khmerTitle.text = khmer
             englishTitle.text = english
             buttonView.text = buttonText
             buttonView.setOnClickListener(itemClickListener)
             buttonView.setTextColor(color!!)
+            buttonView.rippleColor = ColorStateList.valueOf(color!!)
+            buttonView.visibility = view ?: View.VISIBLE
             root.setBackgroundColor(color!!)
         }
     }

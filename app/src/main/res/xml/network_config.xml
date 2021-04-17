@@ -3,4 +3,7 @@
     <domain-config>
         <domain includeSubdomains="true">https://pumiapp.herokuapp.com</domain>
     </domain-config>
+    <domain-config>
+        <domain includeSubdomains="true">https://address.floo.app</domain>
+    </domain-config>
 </network-security-config>

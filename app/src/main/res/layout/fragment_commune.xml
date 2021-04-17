@@ -26,13 +26,7 @@
 
                 <ImageView
                     android:id="@+id/backButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/item_margin"
-                    android:background="?attr/actionBarItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:src="@drawable/ic_back" />
+                    style="@style/Style.Phum.BackButton" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/toolbarTitle"
@@ -40,6 +34,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:gravity="center_horizontal"
+                    style="@style/Style.Phum.TitleTextView"
                     android:textColor="@color/white" />
 
             </RelativeLayout>

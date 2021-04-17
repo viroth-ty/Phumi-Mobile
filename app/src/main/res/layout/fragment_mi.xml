@@ -25,10 +25,10 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="@string/mi"
+                style="@style/Style.Phum.TitleTextView"
                 android:textColor="@color/white" />
 
         </com.google.android.material.appbar.MaterialToolbar>
-
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -53,7 +53,6 @@
         android:lineSpacingExtra="5dp"
         android:text="@string/about_app"
         android:textColor="@color/black"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lottie" />

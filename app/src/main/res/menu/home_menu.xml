@@ -3,8 +3,13 @@
 
     <item
         android:id="@+id/phumFragment"
-        android:icon="@drawable/ic_phum"
+        android:icon="@drawable/ic_cambodia"
         android:title="@string/administrative_region" />
+
+    <item
+        android:id="@+id/locationFragment"
+        android:icon="@drawable/ic_phum"
+        android:title="@string/my_location" />
 
     <item
         android:id="@+id/miFragment"

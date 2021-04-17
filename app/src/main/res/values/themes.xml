@@ -20,10 +20,15 @@
 
         <item name="toolbarStyle">@style/Style.Phum.Toolbar</item>
         <item name="materialButtonStyle">@style/Style.Phum.Button</item>
-        <item name="fontFamily">@font/kantumruy_regular</item>
+        <item name="fontFamily">@font/app_font</item>
+        <item name="materialCardViewStyle">@style/Style.Phum.CardView</item>
 
     </style>
 
+    <style name="Style.Phum.CardView" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
 
     <style name="Style.Phum.Toolbar" parent="@style/Widget.MaterialComponents.Toolbar">
         <item name="contentInsetLeft">0dp</item>
@@ -42,11 +47,25 @@
         <item name="android:textSize">14sp</item>
     </style>
 
-    <style name="Style.Phum.Button" parent="@style/Widget.MaterialComponents.Button">
+    <style name="Style.Phum.Button" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:backgroundTint">@color/white</item>
         <item name="android:textColor">@color/jade</item>
-        <item name="cornerRadius">0dp</item>
         <item name="rippleColor">@color/jade</item>
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="Style.Phum.BackButton" parent="">
+        <item name="android:layout_height">22dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:src">@drawable/ic_back</item>
+        <item name="contentDescription">@null</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?attr/actionBarItemBackground</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginStart">@dimen/item_margin</item>
     </style>
 
 </resources>

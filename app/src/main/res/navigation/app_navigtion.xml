@@ -16,4 +16,11 @@
         android:name="com.pumi.app.view.fragment.PhumFragment"
         android:label="fragment_phum"
         tools:layout="@layout/fragment_phum" />
+
+    <keep_state_fragment
+        android:id="@+id/locationFragment"
+        android:name="com.pumi.app.view.location.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" />
+
 </navigation>
