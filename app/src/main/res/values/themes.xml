@@ -22,6 +22,7 @@
         <item name="materialButtonStyle">@style/Style.Phum.Button</item>
         <item name="fontFamily">@font/app_font</item>
         <item name="materialCardViewStyle">@style/Style.Phum.CardView</item>
+        <item name="android:letterSpacing">0.05</item>
 
     </style>
 
