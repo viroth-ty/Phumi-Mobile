@@ -25,6 +25,12 @@ class PhumFragment : Fragment() {
         statusBar.light(false).color(requireContext().getColor(R.color.jade))
     }
 
+    override fun onResume() {
+        super.onResume()
+        statusBar.light(false).color(requireContext().getColor(R.color.jade))
+
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -36,4 +42,5 @@ class PhumFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
+
 }
