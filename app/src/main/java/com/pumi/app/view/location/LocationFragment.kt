@@ -50,8 +50,6 @@ class LocationFragment : Fragment() {
 
         viewModel.location.observe(viewLifecycleOwner, { location ->
 
-            println("location changed ${location}")
-
             when (location) {
                 LocationListener.PERMISSION_GRANTED -> {
                     replaceFragmentOfTag("allow_fragment") { AllowFragment.newInstance() }
