@@ -17,7 +17,7 @@ import com.pumi.app.databinding.FragmentAllowBinding
 import com.pumi.app.view.epoxy.lottie
 import com.pumi.app.view.epoxy.province
 import com.pumi.app.view.epoxy.title
-import com.pumi.app.view.fragment.LocationViewModel
+import com.pumi.app.viewmodel.LocationViewModel
 
 class AllowFragment : Fragment() {
 

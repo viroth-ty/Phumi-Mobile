@@ -12,7 +12,7 @@ import com.pumi.app.R
 import com.pumi.app.databinding.FragmentForbidBinding
 import com.pumi.app.listener.LocationListener
 import com.pumi.app.utils.Constant
-import com.pumi.app.view.fragment.LocationViewModel
+import com.pumi.app.viewmodel.LocationViewModel
 
 class ForbidFragment : Fragment() {
 

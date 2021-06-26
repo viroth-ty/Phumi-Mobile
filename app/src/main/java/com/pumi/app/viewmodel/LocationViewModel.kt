@@ -1,4 +1,4 @@
-package com.pumi.app.view.fragment
+package com.pumi.app.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

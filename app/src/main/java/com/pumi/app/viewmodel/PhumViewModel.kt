@@ -1,7 +1,7 @@
-package com.pumi.app.view.mi
+package com.pumi.app.viewmodel
 
 import androidx.lifecycle.ViewModel
 
-class MiViewModel : ViewModel() {
+class PhumViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }

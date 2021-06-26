@@ -1,7 +1,6 @@
 package com.pumi.app.repository
 
 import android.content.Context
-import com.google.gson.JsonObject
 import com.pumi.app.data.model.Phum
 import com.pumi.app.data.model.Resolve
 import com.pumi.app.data.model.ResolveBody

@@ -12,7 +12,7 @@ import com.pumi.app.R
 import com.pumi.app.databinding.FragmentVillageBinding
 import com.pumi.app.utils.Constant
 import com.pumi.app.view.epoxy.VillageController
-import com.seanghay.statusbar.statusBar
+import com.pumi.app.viewmodel.VillageViewModel
 
 class VillageFragment : Fragment() {
 

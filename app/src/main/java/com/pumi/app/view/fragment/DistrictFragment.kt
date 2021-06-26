@@ -16,7 +16,7 @@ import com.pumi.app.listener.HandleListener
 import com.pumi.app.utils.Constant
 import com.pumi.app.utils.navigateSafe
 import com.pumi.app.view.epoxy.ProvinceController
-import com.seanghay.statusbar.statusBar
+import com.pumi.app.viewmodel.DistrictViewModel
 
 class DistrictFragment : Fragment() {
 
@@ -61,17 +61,22 @@ class DistrictFragment : Fragment() {
             navController.popBackStack()
         }
         provinceController =
-            ProvinceController(context = requireContext(), requireContext().getColor(R.color.chestnut), object : HandleListener {
-                override fun onItemClick(item: Phum) {
-                    super.onItemClick(item)
-                    val bundle = bundleOf(
-                        Constant.Bundle.id to item.id,
-                        Constant.Bundle.name to item.fullNameKM
-                    )
-                    navController.navigateSafe(R.id.action_districtFragment_to_communeFragment,
-                        bundle)
-                }
-            }, textButton = requireContext().getString(R.string.see_commune))
+            ProvinceController(
+                context = requireContext(), requireContext().getColor(R.color.chestnut),
+                object : HandleListener {
+                    override fun onItemClick(item: Phum) {
+                        super.onItemClick(item)
+                        val bundle = bundleOf(
+                            Constant.Bundle.id to item.id,
+                            Constant.Bundle.name to item.fullNameKM
+                        )
+                        navController.navigateSafe(R.id.action_districtFragment_to_communeFragment,
+                            bundle)
+                    }
+                },
+                textButton = requireContext().getString(R.string.see_commune),
+                navController = findNavController()
+            )
         binding.recyclerview.setController(provinceController)
     }
 

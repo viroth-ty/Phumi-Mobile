@@ -35,15 +35,26 @@
             tools:text="@tools:sample/last_names" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonMapView"
+            style="@style/Style.Phum.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/card_padding"
+            android:text="@string/view_on_google_map"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonView"
+            app:layout_constraintEnd_toStartOf="@+id/buttonView" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/card_padding"
+            style="@style/Style.Phum.Button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/englishTitle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </com.google.android.material.card.MaterialCardView>

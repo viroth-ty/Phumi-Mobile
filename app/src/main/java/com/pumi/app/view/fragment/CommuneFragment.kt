@@ -16,7 +16,7 @@ import com.pumi.app.listener.HandleListener
 import com.pumi.app.utils.Constant
 import com.pumi.app.utils.navigateSafe
 import com.pumi.app.view.epoxy.ProvinceController
-import com.seanghay.statusbar.statusBar
+import com.pumi.app.viewmodel.CommuneViewModel
 
 class CommuneFragment : Fragment() {
 
@@ -69,7 +69,10 @@ class CommuneFragment : Fragment() {
                 )
                 navController.navigateSafe(R.id.action_communeFragment_to_villageFragment, bundle)
             }
-        }, textButton = requireContext().getString(R.string.see_village))
+        },
+            textButton = requireContext().getString(R.string.see_village),
+            navController = findNavController()
+        )
         binding.recyclerview.setController(controller)
     }
 

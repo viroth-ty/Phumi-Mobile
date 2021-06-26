@@ -13,7 +13,8 @@ private val httpClient = OkHttpClient
     .addNetworkInterceptor(ChuckerInterceptor.Builder(PhumiApp.appContext).build())
     .build()
 
-private val retrofit = Retrofit.Builder()
+private val retrofit = Retrofit
+    .Builder()
     .client(httpClient)
     .baseUrl("https://pumiapp.herokuapp.com/pumi/")
     .addConverterFactory(GsonConverterFactory.create())

@@ -6,6 +6,12 @@
     app:startDestination="@id/provinceFragment">
 
     <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.pumi.app.view.fragment.MapFragment"
+        android:label="mapFragment"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
         android:id="@+id/provinceFragment"
         android:name="com.pumi.app.view.fragment.ProvinceFragment"
         android:label="fragment_province"
@@ -13,6 +19,9 @@
         <action
             android:id="@+id/action_provinceFragment_to_districtFragment"
             app:destination="@id/districtFragment" />
+        <action
+            android:id="@+id/action_provinceFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
     </fragment>
 
     <fragment
@@ -23,21 +32,31 @@
         <action
             android:id="@+id/action_districtFragment_to_communeFragment"
             app:destination="@id/communeFragment" />
+        <action
+            android:id="@+id/action_districtFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/communeFragment"
         android:name="com.pumi.app.view.fragment.CommuneFragment"
         android:label="fragment_commune"
-        tools:layout="@layout/fragment_commune" >
+        tools:layout="@layout/fragment_commune">
         <action
             android:id="@+id/action_communeFragment_to_villageFragment"
             app:destination="@id/villageFragment" />
+        <action
+            android:id="@+id/action_communeFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
     </fragment>
     <fragment
         android:id="@+id/villageFragment"
         android:name="com.pumi.app.view.fragment.VillageFragment"
         android:label="fragment_village"
-        tools:layout="@layout/fragment_village" />
+        tools:layout="@layout/fragment_village">
+        <action
+            android:id="@+id/action_villageFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
 
 </navigation>

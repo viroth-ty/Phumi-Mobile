@@ -13,7 +13,7 @@ import androidx.fragment.app.commit
 import com.pumi.app.R
 import com.pumi.app.databinding.FragmentLocationBinding
 import com.pumi.app.listener.LocationListener
-import com.pumi.app.view.fragment.LocationViewModel
+import com.pumi.app.viewmodel.LocationViewModel
 import com.seanghay.statusbar.statusBar
 
 class LocationFragment : Fragment() {

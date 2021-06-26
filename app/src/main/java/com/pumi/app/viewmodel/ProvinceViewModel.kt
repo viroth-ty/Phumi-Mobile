@@ -1,4 +1,4 @@
-package com.pumi.app.view.fragment
+package com.pumi.app.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -22,6 +22,7 @@ class ProvinceViewModel : ViewModel() {
                     phum.postValue(response.data)
                 }
                 is ResultOf.Error -> {
+                    print("error ${response.exception}")
                     loading.postValue(false)
                 }
             }
