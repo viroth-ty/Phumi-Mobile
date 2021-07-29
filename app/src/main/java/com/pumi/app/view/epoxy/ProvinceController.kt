@@ -22,13 +22,13 @@ class ProvinceController(
     EpoxyAsyncUtil.getAsyncBackgroundHandler()
 ) {
 
-    private var provinnces: CopyOnWriteArrayList<Phum> = CopyOnWriteArrayList<Phum>()
+    private var provinces: CopyOnWriteArrayList<Phum> = CopyOnWriteArrayList<Phum>()
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun buildModels() {
 
-        if (provinnces.isNotEmpty()) {
-            provinnces.forEach { item ->
+        if (provinces.isNotEmpty()) {
+            provinces.forEach { item ->
                 province {
                     id(item.id)
                     khmer(item.fullNameKM)
@@ -47,7 +47,7 @@ class ProvinceController(
     }
 
     fun submit(posts: ArrayList<Phum>) {
-        provinnces.addAll(posts)
+        provinces.addAll(posts)
         requestModelBuild()
     }
 
